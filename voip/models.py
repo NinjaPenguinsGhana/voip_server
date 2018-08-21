@@ -1,6 +1,6 @@
 import datetime as dt
 
-from . app import db
+from voip.app import db
 
 class Commands(db.Model):
     __tablename__ = 'commands'
@@ -17,3 +17,5 @@ class Commands(db.Model):
     def __repr__(self):
         return '<Command: {}>'.format(self.command)
 
+    def __init__(self, command, **kwargs):
+        db.Model.__init__(self, command=command, **kwargs)
