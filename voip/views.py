@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from . app import app
 
+
 @app.route('/dummy', methods=['GET'])
 def get_dummy():  
 
